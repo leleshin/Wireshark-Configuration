@@ -5,18 +5,15 @@
 
 **NETWORKWALKS | CYBERSECURITY & PENETRATION TESTING INTERNSHIP**
 
-**Hands-On Network Packet Capture, Protocol Analysis, Traffic Monitoring & Cybersecurity Investigation**
+**Hands-On Packet Capture • Protocol Analysis • Traffic Monitoring • Network Investigation**
 
-<img src="https://img.shields.io/badge/Tool-Wireshark-0070C0?style=flat-square&logo=wireshark&logoColor=white" />
-<img src="https://img.shields.io/badge/Skill-Packet_Analysis-C00000?style=flat-square" />
-<img src="https://img.shields.io/badge/Skill-Network_Security-404040?style=flat-square&labelColor=C00000" />
-<img src="https://img.shields.io/badge/Skill-Traffic_Monitoring-238F89?style=flat-square" />
-<img src="https://img.shields.io/badge/Protocols-TCP%2FIP-0070C0?style=flat-square" />
-<img src="https://img.shields.io/badge/Protocols-DNS%20%7C%20HTTP%20%7C%20ICMP-E87500?style=flat-square" />
-<img src="https://img.shields.io/badge/Platform-Windows_11-0078D4?style=flat-square" />
-<img src="https://img.shields.io/badge/Environment-Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" />
-<img src="https://img.shields.io/badge/Skill-SOC_Analysis-404040?style=flat-square&labelColor=C00000" />
-<img src="https://img.shields.io/badge/Internship-B084-238F89?style=flat-square" />
+<img src="https://img.shields.io/badge/Tool-Wireshark_4.6.9-0070C0?style=flat-square" alt="Wireshark 4.6.9" />
+<img src="https://img.shields.io/badge/Skill-Packet_Analysis-C00000?style=flat-square" alt="Packet analysis" />
+<img src="https://img.shields.io/badge/Skill-Network_Security-404040?style=flat-square" alt="Network security" />
+<img src="https://img.shields.io/badge/Skill-Traffic_Monitoring-238F89?style=flat-square" alt="Traffic monitoring" />
+<img src="https://img.shields.io/badge/Protocols-mDNS%20%7C%20SSDP%20%7C%20TCP%20%7C%20ICMPv6-E87500?style=flat-square" alt="Observed protocols" />
+<img src="https://img.shields.io/badge/Platform-Windows_11-0078D4?style=flat-square" alt="Windows 11" />
+<img src="https://img.shields.io/badge/Internship-B084-238F89?style=flat-square" alt="Batch B084" />
 
 </div>
 
@@ -26,228 +23,116 @@
 
 This repository documents my hands-on experience with **Wireshark installation, configuration, and network traffic analysis** during Week 1 of the Networkwalks Cybersecurity and Penetration Testing Internship (Batch B084).
 
-The primary focus of this project is to develop practical cybersecurity skills using Wireshark, an open-source network protocol analyzer designed to capture, inspect, monitor, and troubleshoot network communications.
+I installed and launched Wireshark on Windows 11, identified available network interfaces, selected the Wi-Fi interface for a live packet capture, and inspected captured network traffic. I also explored Wireshark in Kali Linux running through Oracle VirtualBox as an additional learning environment.
 
-As part of my training, I successfully installed Wireshark on Windows 11 and explored how to launch and operate Wireshark within Kali Linux running through Oracle VirtualBox.
-
-This project focuses on understanding how network packets travel between devices, identifying network interfaces, examining communication protocols, and applying Wireshark display filters to investigate network activity.
-
-The practical learning activities cover:
-
-- Wireshark installation and initial configuration.
-- Identifying network interfaces for packet capture.
-- Capturing and examining network traffic.
-- Understanding TCP, UDP, DNS, HTTP, and ICMP protocols.
-- Applying Wireshark display filters to isolate relevant packets.
-- Recognizing network communication patterns and potential security concerns.
-- Developing foundational packet analysis and troubleshooting skills.
-- Understanding the importance of Wireshark in Security Operations Center (SOC) investigations.
-
-The project demonstrates my commitment to building hands-on experience in **network security monitoring, traffic investigation, packet analysis, and cybersecurity operations**.
-
----
+The screenshots below document the Wireshark interface, an active capture, and inspection of packet headers. They show **mDNS, SSDP, TCP, and ICMPv6** traffic; the appearance of these protocols alone does not indicate malicious activity.
 
 ## 🎯 Project Objectives
 
 1. Install and configure Wireshark on Windows 11.
-2. Understand Wireshark's graphical user interface and core functions.
-3. Identify available network interfaces and select appropriate capture sources.
-4. Capture live network packets within an authorized environment.
-5. Examine packet details, including source and destination IP addresses, protocols, and ports.
-6. Analyze TCP, UDP, DNS, HTTP, and ICMP network traffic.
-7. Practice Wireshark display filters for efficient packet investigation.
-8. Explore Wireshark functionality in Kali Linux.
-9. Develop practical network troubleshooting and traffic monitoring skills.
-10. Build foundational knowledge for cybersecurity investigations, SOC analysis, and ethical penetration testing.
+2. Identify available network interfaces and select a capture source.
+3. Capture live traffic on an authorized network.
+4. Examine packet source and destination addresses, protocol names, and lengths.
+5. Inspect Ethernet, IPv4, UDP, and application-protocol details.
+6. Learn to apply display filters for TCP, UDP, DNS, HTTP, ICMP, mDNS, and SSDP.
+7. Build foundational skills in network troubleshooting and SOC traffic analysis.
+
+## 🛠️ Tools and Environment
+
+| Tool / environment | Purpose |
+|---|---|
+| **Wireshark 4.6.9** | Packet capture and protocol inspection (version shown in screenshot) |
+| **Windows 11** | Host system used for the documented capture |
+| **Wi-Fi network interface** | Selected capture interface |
+| **Kali Linux / Oracle VirtualBox** | Additional environment explored for Wireshark practice |
+| **GitHub** | Lab documentation and evidence |
 
 ---
 
-## 🛠️ Primary Tool
+## 🖥️ Step 1: Launch Wireshark and Identify Interfaces
 
-**Wireshark – Network Protocol Analyzer**
+After installing Wireshark on Windows, I launched the application and reviewed the available capture interfaces, including Wi-Fi, Ethernet, loopback, and virtual adapters. The welcome screen confirmed that Wireshark was running and ready for a capture.
 
-Wireshark is the central application used throughout this project. Windows 11 serves as the primary installation platform, while Kali Linux and Oracle VirtualBox provide an additional environment for exploring network analysis.
+![Wireshark welcome screen showing version 4.6.9 and available capture interfaces](images/wireshark-interface.png)
 
----
+*Figure 1: Wireshark welcome screen and available capture interfaces on Windows.*
 
-## 🛡️ Ethical Security Statement
+## 📡 Step 2: Start a Live Capture on Wi-Fi
 
-All packet capture and network analysis activities are intended strictly for educational purposes and authorized cybersecurity training. Network traffic should only be captured on systems and networks where permission has been granted.
+I selected the **Wi-Fi** interface and started a live packet capture. Wireshark populated its packet list with the packet number, time, source, destination, protocol, length, and summary information.
 
----
+![Wireshark capturing Wi-Fi traffic, including mDNS packets and an SSDP packet detail view](images/live-packet-capture.png)
 
-**Author:** Lamidi Olatunji Micheal Eleshin
+*Figure 2: Live Wi-Fi capture. The packet list shows mDNS discovery traffic; the packet-details pane displays an SSDP packet.*
 
-**Program:** Networkwalks Cybersecurity & Penetration Testing Internship
+In this capture, **mDNS** traffic used the IPv4 multicast destination `224.0.0.251`. The displayed discovery messages included references to a Roku TV and another local device. The selected packet's details showed **SSDP over UDP**, with destination `239.255.255.250` and port `1900`.
 
-**Batch:** B084 | Week 1
+## 🔎 Step 3: Inspect Packet Headers and Protocol Fields
 
-**Project Focus:** Wireshark Installation, Packet Capture, Network Traffic Analysis & Security Monitoring
+I examined packet details to understand how Wireshark breaks down a frame into protocol layers. The screenshot shows the packet list alongside expanded Ethernet and IPv4 fields, including header version, header length, total length, fragmentation flags, and time to live (TTL).
 
+![Wireshark packet list with Ethernet and IPv4 header fields expanded](images/packet-details-analysis.png)
 
-As part of this practical training, I installed and configured Wireshark on Windows and explored its functionality within Kali Linux to understand network packet capture, traffic inspection, and security monitoring.
+*Figure 3: Packet inspection with expanded IPv4 header fields; the capture also includes SSDP, mDNS, TCP, and ICMPv6 traffic.*
 
-This project provides a foundation for developing practical skills in network administration, cybersecurity investigations, ethical hacking, and Security Operations Center (SOC) operations.
+The capture reached **626 packets with 0 reported dropped packets** at the moment shown. This describes the capture status in the screenshot, not an overall network health or security assessment.
 
----
+## 🧪 Step 4: Practice Wireshark Display Filters
 
-## 🎯 Project Objectives
+The following are useful filters for continued analysis. They are **practice examples**, not evidence that every filter was applied in the screenshots.
 
-1. Install and configure Oracle VirtualBox.
-2. Import and configure Kali Linux.
-3. Set up an isolated virtual network.
-4. Install and configure Wireshark on Windows 11.
-5. Explore Wireshark within Kali Linux.
-6. Identify active network interfaces.
-7. Capture and inspect network packets.
-8. Analyze TCP, UDP, DNS, HTTP, and ICMP traffic.
-9. Practice Wireshark display filters.
-10. Develop network troubleshooting and security monitoring skills.
+| Investigation | Display filter |
+|---|---|
+| TCP traffic | `tcp` |
+| UDP traffic | `udp` |
+| DNS traffic | `dns` |
+| HTTP traffic | `http` |
+| ICMP traffic | `icmp` |
+| ICMPv6 traffic | `icmpv6` |
+| Multicast DNS | `mdns` |
+| SSDP discovery | `ssdp` |
+| Traffic involving a specific host | `ip.addr == 10.0.0.31` |
+| SSDP UDP port | `udp.port == 1900` |
+| Initial TCP SYN packets | `tcp.flags.syn == 1 && tcp.flags.ack == 0` |
 
----
+To apply a filter, enter it in the **display filter bar** at the top of Wireshark and press **Enter**. Display filters narrow what is shown; they do not change the packets already captured.
 
-## 🛠️ Tools and Technologies
+## 📊 Observations and Interpretation
 
-| Tool | Purpose |
-|------|---------|
-| Windows 11 | Host operating system |
-| Oracle VirtualBox 7.2 | Virtual machine management |
-| Kali Linux 2026.2 | Cybersecurity testing environment |
-| Wireshark | Packet capture and protocol analysis |
-| TCP/IP | Network communication analysis |
-| Linux Terminal | System and network commands |
-| GitHub | Project documentation and portfolio |
+| Observation from screenshots | Interpretation |
+|---|---|
+| mDNS packets to `224.0.0.251` | Local multicast service discovery |
+| SSDP packets to `239.255.255.250` | Device/service discovery, commonly associated with UPnP |
+| TCP packets with ACK flags | Acknowledgments within TCP communication |
+| ICMPv6 Router Advertisement | IPv6 router/network configuration signaling |
+| Expanded IPv4 header fields | Demonstrates how to inspect packet structure and metadata |
 
----
-
-## 🖥️ Lab Setup and Configuration
-
-### Step 1: Install Oracle VirtualBox
-
-- Download Oracle VirtualBox from the official website.
-- Install the application on Windows 11.
-- Configure the virtual machine environment.
-- Allocate appropriate RAM, CPU, and storage resources.
-
-### Step 2: Import Kali Linux
-
-- Download the Kali Linux VirtualBox image.
-- Import the virtual machine into VirtualBox.
-- Configure the virtual network adapter.
-- Start Kali Linux and verify successful operation.
-
-### Step 3: Configure Virtual Networking
-
-Example lab network:
-
-```text
-Network:       10.0.0.0/24
-IP Address:    10.0.0.2
-Subnet Mask:   255.255.255.0
-```
-
-The virtual network is intended to support authorized communication between lab machines.
-### Step 4: Install Wireshark on Windows
-
-- Download Wireshark from the official website.
-- Run the installation wizard.
-- Install Npcap when prompted.
-- Launch Wireshark.
-- Identify available network interfaces.
-  
-### Step 5: Explore Wireshark in Kali Linux
-
-Check whether Wireshark is installed:
-
-```bash
-wireshark --version
-```
-
-Launch Wireshark:
-
-```bash
-wireshark
-```
-
-If Wireshark is not installed:
-
-```bash
-sudo apt update
-sudo apt install wireshark
-```
-
-Note: Installing Wireshark inside Kali Linux does not automatically install it on the Windows host.
-
----
-
-## 📡 Wireshark Packet Analysis
-
-Wireshark allows network administrators and cybersecurity analysts to inspect packets and investigate communication between devices.
-
-### Common Display Filters
-
-| Protocol | Wireshark Filter |
-|----------|------------------|
-| TCP | `tcp` |
-| UDP | `udp` |
-| DNS | `dns` |
-| HTTP | `http` |
-| ICMP | `icmp` |
-| HTTPS/TLS | `tls` |
-| Specific IP | `ip.addr == 10.0.0.2` |
-| TCP Port 80 | `tcp.port == 80` |
-| DNS Queries | `dns.flags.response == 0` |
-| TCP SYN Packets | `tcp.flags.syn == 1 && tcp.flags.ack == 0` |
-
-These filters help identify specific protocols, network conversations, and potentially suspicious traffic patterns.
-
----
+**Security note:** These observations are consistent with ordinary network activity. The screenshots alone do not establish an intrusion, compromise, or vulnerability.
 
 ## 📚 Learning Outcomes
 
-Through this project, I developed a better understanding of:
-
-- Virtualization and virtual machine configuration.
-- Kali Linux installation and administration.
-- Network addressing and connectivity.
-- Wireshark installation and configuration.
-- Network packet inspection and protocol analysis.
-- TCP/IP communication and troubleshooting.
-- Network security monitoring fundamentals.
-- Cybersecurity documentation using GitHub.
-
----
+Through this exercise, I practiced identifying capture interfaces, starting a Wi-Fi capture, reading packet lists, examining layered packet headers, and interpreting common local-network discovery traffic. I also gained a clearer understanding of how Wireshark supports network troubleshooting and security investigations.
 
 ## 🛡️ Ethical Security Statement
 
-All activities documented in this repository are performed for educational purposes and authorized cybersecurity testing.
-
-Packet captures and security testing must be conducted only on systems and networks where appropriate permission has been granted.
+All activities in this repository are intended for education and authorized security training. Capture or inspect traffic only on systems and networks where you have permission. Review packet captures and screenshots before sharing them publicly because they may contain device names, IP addresses, or other network metadata.
 
 ---
 
 ## 👨‍💻 About the Author
 
-**Lamidi Olatunji Micheal Eleshin**
+**Lamidi Olatunji Micheal Eleshin**  
+Cybersecurity & Penetration Testing Intern | Aspiring Cybersecurity Analyst | IT Auditing | IT Support | GRC & Risk Management
 
-Cybersecurity & Penetration Testing Intern | Aspiring Cybersecurity Analyst | IT Auditor | IT Support Engineer | GRC & Risk Management
-
-**Specialization Areas:**
-
-Cybersecurity | Network Security | IT Auditing | Governance, Risk & Compliance | Penetration Testing | SOC Operations
-
-**Internship:** Networkwalks Cybersecurity & Penetration Testing
-
-**Batch:** B084
-
-**Project:** Week 1 – Virtual Lab Setup and Wireshark Network Traffic Analysis
-
----
+**Program:** Networkwalks Cybersecurity & Penetration Testing Internship  
+**Batch:** B084 | Week 1  
+**Project Focus:** Wireshark Installation, Packet Capture, Protocol Inspection & Network Traffic Analysis
 
 <div align="center">
 
-**"Cybersecurity begins with vigilance. Failure to prevent a threat today may become tomorrow's data disaster."**
+**“Cybersecurity begins with vigilance. Failure to prevent a threat today may become tomorrow's data disaster.”**
 
 *— Lamidi Olatunji Micheal Eleshin*
 
 </div>
+
