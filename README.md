@@ -105,7 +105,7 @@ Wireshark displayed captured packets with the following information:
 
 ### Screenshot 2: Live Packet Capture
 
-![Wireshark Live Packet Capture](images/live-packet-capture.png)
+![](Screenshot-2.png)
 
 *Figure 2: Live Wi-Fi packet capture showing mDNS traffic and SSDP packet details.*
 
