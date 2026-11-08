@@ -148,7 +148,7 @@ Subnet Mask:   255.255.255.0
 ```
 
 The virtual network is intended to support authorized communication between lab machines.
-
+![](Screenshot (246).png)
 ### Step 4: Install Wireshark on Windows
 
 - Download Wireshark from the official website.
