@@ -148,7 +148,6 @@ Subnet Mask:   255.255.255.0
 ```
 
 The virtual network is intended to support authorized communication between lab machines.
-![](Screenshot (246).png)
 ### Step 4: Install Wireshark on Windows
 
 - Download Wireshark from the official website.
@@ -156,7 +155,8 @@ The virtual network is intended to support authorized communication between lab 
 - Install Npcap when prompted.
 - Launch Wireshark.
 - Identify available network interfaces.
-
+  
+![](Screenshot (246).png)
 ### Step 5: Explore Wireshark in Kali Linux
 
 Check whether Wireshark is installed:
