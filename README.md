@@ -2,18 +2,22 @@
 <div align="center">
 
 # 🔐 Cybersecurity Internship – B084
-## Week 1: Virtual Lab Setup & Wireshark Network Traffic Analysis
+## Week 1: Wireshark Installation, Configuration & Network Traffic Analysis
+
 **NETWORKWALKS | CYBERSECURITY & PENETRATION TESTING INTERNSHIP**
 
-<img src="https://img.shields.io/badge/Skill-Cybersecurity-404040?style=flat-square&labelColor=C00000" />
-<img src="https://img.shields.io/badge/VirtualBox-v7.2-0070C0?style=flat-square" />
-<img src="https://img.shields.io/badge/Kali_Linux-v2026.2-E87500?style=flat-square&logo=kalilinux&logoColor=white" />
-<img src="https://img.shields.io/badge/Skill-Linux-404040?style=flat-square&labelColor=C00000" />
-<img src="https://img.shields.io/badge/Network-10.0.0.0%2F24-238F89?style=flat-square" />
-<img src="https://img.shields.io/badge/Skill-Penetration_Testing-C00000?style=flat-square" />
-<img src="https://img.shields.io/badge/Skill-Virtualization-404040?style=flat-square" />
-<img src="https://img.shields.io/badge/Tool-Wireshark-0070C0?style=flat-square" />
-<img src="https://img.shields.io/badge/Platform-GitHub-404040?style=flat-square&logo=github&logoColor=white" />
+**Hands-On Network Packet Capture, Protocol Analysis, Traffic Monitoring & Cybersecurity Investigation**
+
+<img src="https://img.shields.io/badge/Tool-Wireshark-0070C0?style=flat-square&logo=wireshark&logoColor=white" />
+<img src="https://img.shields.io/badge/Skill-Packet_Analysis-C00000?style=flat-square" />
+<img src="https://img.shields.io/badge/Skill-Network_Security-404040?style=flat-square&labelColor=C00000" />
+<img src="https://img.shields.io/badge/Skill-Traffic_Monitoring-238F89?style=flat-square" />
+<img src="https://img.shields.io/badge/Protocols-TCP%2FIP-0070C0?style=flat-square" />
+<img src="https://img.shields.io/badge/Protocols-DNS%20%7C%20HTTP%20%7C%20ICMP-E87500?style=flat-square" />
+<img src="https://img.shields.io/badge/Platform-Windows_11-0078D4?style=flat-square" />
+<img src="https://img.shields.io/badge/Environment-Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" />
+<img src="https://img.shields.io/badge/Skill-SOC_Analysis-404040?style=flat-square&labelColor=C00000" />
+<img src="https://img.shields.io/badge/Internship-B084-238F89?style=flat-square" />
 
 </div>
 
@@ -21,9 +25,66 @@
 
 ## 📌 Project Overview
 
-This repository documents my hands-on cybersecurity learning experience during Week 1 of the Networkwalks Cybersecurity and Penetration Testing Internship, Batch B084.
+This repository documents my hands-on experience with **Wireshark installation, configuration, and network traffic analysis** during Week 1 of the Networkwalks Cybersecurity and Penetration Testing Internship (Batch B084).
 
-The project focuses on building a controlled virtual cybersecurity laboratory using Oracle VirtualBox, Kali Linux, Windows 11, and Wireshark.
+The primary focus of this project is to develop practical cybersecurity skills using Wireshark, an open-source network protocol analyzer designed to capture, inspect, monitor, and troubleshoot network communications.
+
+As part of my training, I successfully installed Wireshark on Windows 11 and explored how to launch and operate Wireshark within Kali Linux running through Oracle VirtualBox.
+
+This project focuses on understanding how network packets travel between devices, identifying network interfaces, examining communication protocols, and applying Wireshark display filters to investigate network activity.
+
+The practical learning activities cover:
+
+- Wireshark installation and initial configuration.
+- Identifying network interfaces for packet capture.
+- Capturing and examining network traffic.
+- Understanding TCP, UDP, DNS, HTTP, and ICMP protocols.
+- Applying Wireshark display filters to isolate relevant packets.
+- Recognizing network communication patterns and potential security concerns.
+- Developing foundational packet analysis and troubleshooting skills.
+- Understanding the importance of Wireshark in Security Operations Center (SOC) investigations.
+
+The project demonstrates my commitment to building hands-on experience in **network security monitoring, traffic investigation, packet analysis, and cybersecurity operations**.
+
+---
+
+## 🎯 Project Objectives
+
+1. Install and configure Wireshark on Windows 11.
+2. Understand Wireshark's graphical user interface and core functions.
+3. Identify available network interfaces and select appropriate capture sources.
+4. Capture live network packets within an authorized environment.
+5. Examine packet details, including source and destination IP addresses, protocols, and ports.
+6. Analyze TCP, UDP, DNS, HTTP, and ICMP network traffic.
+7. Practice Wireshark display filters for efficient packet investigation.
+8. Explore Wireshark functionality in Kali Linux.
+9. Develop practical network troubleshooting and traffic monitoring skills.
+10. Build foundational knowledge for cybersecurity investigations, SOC analysis, and ethical penetration testing.
+
+---
+
+## 🛠️ Primary Tool
+
+**Wireshark – Network Protocol Analyzer**
+
+Wireshark is the central application used throughout this project. Windows 11 serves as the primary installation platform, while Kali Linux and Oracle VirtualBox provide an additional environment for exploring network analysis.
+
+---
+
+## 🛡️ Ethical Security Statement
+
+All packet capture and network analysis activities are intended strictly for educational purposes and authorized cybersecurity training. Network traffic should only be captured on systems and networks where permission has been granted.
+
+---
+
+**Author:** Lamidi Olatunji Micheal Eleshin
+
+**Program:** Networkwalks Cybersecurity & Penetration Testing Internship
+
+**Batch:** B084 | Week 1
+
+**Project Focus:** Wireshark Installation, Packet Capture, Network Traffic Analysis & Security Monitoring
+
 
 As part of this practical training, I installed and configured Wireshark on Windows and explored its functionality within Kali Linux to understand network packet capture, traffic inspection, and security monitoring.
 
