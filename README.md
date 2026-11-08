@@ -83,7 +83,7 @@ The application displayed multiple network interfaces, including Wi-Fi, Ethernet
 
 ### Screenshot 1: Wireshark Interface
 
-![](Screenshot.png)
+![](Screenshot-png)
 
 *Figure 1: Wireshark 4.6.9 showing available network interfaces.*
 
