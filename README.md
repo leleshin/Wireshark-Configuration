@@ -156,6 +156,9 @@ The virtual network is intended to support authorized communication between lab 
 - Launch Wireshark.
 - Identify available network interfaces.
   
+** Virtualbox NAT Manager Screenhoot
+![](NAT-Configuration.png)
+
 ### Step 5: Explore Wireshark in Kali Linux
 
 Check whether Wireshark is installed:
