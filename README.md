@@ -3,9 +3,6 @@
 
 # 🔐 Cybersecurity Internship – B084
 ## Week 1: Virtual Lab Setup & Wireshark Network Traffic Analysis
-
-**Building an Isolated Virtual Lab for Network Security, Packet Analysis, Penetration Testing, and Ethical Hacking**
-
 **NETWORKWALKS | CYBERSECURITY & PENETRATION TESTING INTERNSHIP**
 
 <img src="https://img.shields.io/badge/Skill-Cybersecurity-404040?style=flat-square&labelColor=C00000" />
