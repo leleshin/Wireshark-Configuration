@@ -137,7 +137,7 @@ The inspection included:
 
 ### Screenshot 3: Packet Header Analysis
 
-![Wireshark Packet Inspection](images/packet-details-analysis.png)
+![](Screenshot-3.png)
 
 *Figure 3: Expanded Ethernet and IPv4 packet header fields.*
 
