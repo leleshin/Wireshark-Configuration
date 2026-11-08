@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # 🔐 Cybersecurity Internship – B084
@@ -5,15 +6,18 @@
 
 **NETWORKWALKS | CYBERSECURITY & PENETRATION TESTING INTERNSHIP**
 
-**Hands-On Packet Capture • Protocol Analysis • Traffic Monitoring • Network Investigation**
+**Hands-On Network Packet Capture, Protocol Analysis, Traffic Monitoring & Cybersecurity Investigation**
 
-<img src="https://img.shields.io/badge/Tool-Wireshark_4.6.9-0070C0?style=flat-square" alt="Wireshark 4.6.9" />
-<img src="https://img.shields.io/badge/Skill-Packet_Analysis-C00000?style=flat-square" alt="Packet analysis" />
-<img src="https://img.shields.io/badge/Skill-Network_Security-404040?style=flat-square" alt="Network security" />
-<img src="https://img.shields.io/badge/Skill-Traffic_Monitoring-238F89?style=flat-square" alt="Traffic monitoring" />
-<img src="https://img.shields.io/badge/Protocols-mDNS%20%7C%20SSDP%20%7C%20TCP%20%7C%20ICMPv6-E87500?style=flat-square" alt="Observed protocols" />
-<img src="https://img.shields.io/badge/Platform-Windows_11-0078D4?style=flat-square" alt="Windows 11" />
-<img src="https://img.shields.io/badge/Internship-B084-238F89?style=flat-square" alt="Batch B084" />
+<img src="https://img.shields.io/badge/Tool-Wireshark_4.6.9-0070C0?style=flat-square" />
+<img src="https://img.shields.io/badge/Skill-Packet_Analysis-C00000?style=flat-square" />
+<img src="https://img.shields.io/badge/Skill-Network_Security-404040?style=flat-square&labelColor=C00000" />
+<img src="https://img.shields.io/badge/Skill-Traffic_Monitoring-238F89?style=flat-square" />
+<img src="https://img.shields.io/badge/Protocols-TCP%2FIP-0070C0?style=flat-square" />
+<img src="https://img.shields.io/badge/Protocols-mDNS%20%7C%20SSDP%20%7C%20ICMPv6-E87500?style=flat-square" />
+<img src="https://img.shields.io/badge/Platform-Windows_11-0078D4?style=flat-square" />
+<img src="https://img.shields.io/badge/Environment-Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" />
+<img src="https://img.shields.io/badge/Skill-SOC_Analysis-404040?style=flat-square&labelColor=C00000" />
+<img src="https://img.shields.io/badge/Internship-B084-238F89?style=flat-square" />
 
 </div>
 
@@ -23,116 +27,214 @@
 
 This repository documents my hands-on experience with **Wireshark installation, configuration, and network traffic analysis** during Week 1 of the Networkwalks Cybersecurity and Penetration Testing Internship (Batch B084).
 
-I installed and launched Wireshark on Windows 11, identified available network interfaces, selected the Wi-Fi interface for a live packet capture, and inspected captured network traffic. I also explored Wireshark in Kali Linux running through Oracle VirtualBox as an additional learning environment.
+The primary focus of this project is to develop practical cybersecurity skills using Wireshark, an open-source network protocol analyzer designed to capture, inspect, monitor, and troubleshoot network communications.
 
-The screenshots below document the Wireshark interface, an active capture, and inspection of packet headers. They show **mDNS, SSDP, TCP, and ICMPv6** traffic; the appearance of these protocols alone does not indicate malicious activity.
+As part of my training, I successfully installed Wireshark 4.6.9 on Windows 11 and explored its functionality within Kali Linux running through Oracle VirtualBox.
+
+I identified available network interfaces, selected Wi-Fi for live packet capture, and examined captured traffic to understand network communication and protocol behavior.
+
+The practical learning activities include:
+
+- Wireshark installation and initial configuration.
+- Identifying available network interfaces.
+- Capturing and examining live network traffic.
+- Understanding TCP, UDP, mDNS, SSDP, and ICMPv6.
+- Exploring Wireshark display filters.
+- Inspecting source and destination IP addresses.
+- Examining Ethernet and IPv4 packet headers.
+- Developing foundational SOC investigation skills.
+
+---
 
 ## 🎯 Project Objectives
 
 1. Install and configure Wireshark on Windows 11.
-2. Identify available network interfaces and select a capture source.
-3. Capture live traffic on an authorized network.
-4. Examine packet source and destination addresses, protocol names, and lengths.
-5. Inspect Ethernet, IPv4, UDP, and application-protocol details.
-6. Learn to apply display filters for TCP, UDP, DNS, HTTP, ICMP, mDNS, and SSDP.
-7. Build foundational skills in network troubleshooting and SOC traffic analysis.
-
-## 🛠️ Tools and Environment
-
-| Tool / environment | Purpose |
-|---|---|
-| **Wireshark 4.6.9** | Packet capture and protocol inspection (version shown in screenshot) |
-| **Windows 11** | Host system used for the documented capture |
-| **Wi-Fi network interface** | Selected capture interface |
-| **Kali Linux / Oracle VirtualBox** | Additional environment explored for Wireshark practice |
-| **GitHub** | Lab documentation and evidence |
+2. Understand Wireshark's interface and features.
+3. Identify network interfaces for packet capture.
+4. Capture live Wi-Fi network traffic.
+5. Examine packet source and destination addresses.
+6. Identify network protocols and communication patterns.
+7. Inspect Ethernet, IPv4, and UDP packet fields.
+8. Practice Wireshark display filters.
+9. Develop practical network troubleshooting skills.
+10. Build foundational knowledge for SOC investigations.
 
 ---
 
-## 🖥️ Step 1: Launch Wireshark and Identify Interfaces
+## 🛠️ Primary Tool
 
-After installing Wireshark on Windows, I launched the application and reviewed the available capture interfaces, including Wi-Fi, Ethernet, loopback, and virtual adapters. The welcome screen confirmed that Wireshark was running and ready for a capture.
+**Wireshark 4.6.9 – Network Protocol Analyzer**
 
-![Wireshark welcome screen showing version 4.6.9 and available capture interfaces](images/wireshark-interface.png)
+Wireshark is the primary application used throughout this project.
 
-*Figure 1: Wireshark welcome screen and available capture interfaces on Windows.*
+**Supporting Environment:**
+- Windows 11
+- Kali Linux
+- Oracle VirtualBox
+- Wi-Fi Network Interface
 
-## 📡 Step 2: Start a Live Capture on Wi-Fi
+---
 
-I selected the **Wi-Fi** interface and started a live packet capture. Wireshark populated its packet list with the packet number, time, source, destination, protocol, length, and summary information.
+## 🖥️ Step 1: Wireshark Installation and Configuration
 
-![Wireshark capturing Wi-Fi traffic, including mDNS packets and an SSDP packet detail view](images/live-packet-capture.png)
+I installed Wireshark on Windows 11 and launched the application to verify successful installation.
 
-*Figure 2: Live Wi-Fi capture. The packet list shows mDNS discovery traffic; the packet-details pane displays an SSDP packet.*
+The application displayed multiple network interfaces, including Wi-Fi, Ethernet, loopback, and virtual network adapters.
 
-In this capture, **mDNS** traffic used the IPv4 multicast destination `224.0.0.251`. The displayed discovery messages included references to a Roku TV and another local device. The selected packet's details showed **SSDP over UDP**, with destination `239.255.255.250` and port `1900`.
+### Screenshot 1: Wireshark Interface
 
-## 🔎 Step 3: Inspect Packet Headers and Protocol Fields
+![Wireshark Installation and Interface](images/wireshark-interface.png)
 
-I examined packet details to understand how Wireshark breaks down a frame into protocol layers. The screenshot shows the packet list alongside expanded Ethernet and IPv4 fields, including header version, header length, total length, fragmentation flags, and time to live (TTL).
+*Figure 1: Wireshark 4.6.9 showing available network interfaces.*
 
-![Wireshark packet list with Ethernet and IPv4 header fields expanded](images/packet-details-analysis.png)
+---
 
-*Figure 3: Packet inspection with expanded IPv4 header fields; the capture also includes SSDP, mDNS, TCP, and ICMPv6 traffic.*
+## 📡 Step 2: Live Network Packet Capture
 
-The capture reached **626 packets with 0 reported dropped packets** at the moment shown. This describes the capture status in the screenshot, not an overall network health or security assessment.
+I selected the Wi-Fi interface and started a live network capture.
 
-## 🧪 Step 4: Practice Wireshark Display Filters
+Wireshark displayed captured packets with the following information:
 
-The following are useful filters for continued analysis. They are **practice examples**, not evidence that every filter was applied in the screenshots.
+- Packet number
+- Capture time
+- Source IP address
+- Destination IP address
+- Protocol
+- Packet length
+- Packet information
 
-| Investigation | Display filter |
+### Screenshot 2: Live Packet Capture
+
+![Wireshark Live Packet Capture](images/live-packet-capture.png)
+
+*Figure 2: Live Wi-Fi packet capture showing mDNS traffic and SSDP packet details.*
+
+### Observations
+
+During the capture, I observed:
+
+- mDNS multicast traffic to 224.0.0.251.
+- SSDP discovery traffic to 239.255.255.250.
+- UDP communication using port 1900.
+- Local network device discovery messages.
+
+These observations demonstrate normal service-discovery activity and do not independently indicate malicious behavior.
+
+---
+
+## 🔎 Step 3: Network Packet Inspection
+
+I explored the packet details panel to understand how Wireshark organizes captured network communication.
+
+The inspection included:
+
+- Ethernet frame information
+- IPv4 source and destination addresses
+- IP header version and length
+- Packet fragmentation flags
+- Time to Live (TTL)
+- Protocol information
+
+### Screenshot 3: Packet Header Analysis
+
+![Wireshark Packet Inspection](images/packet-details-analysis.png)
+
+*Figure 3: Expanded Ethernet and IPv4 packet header fields.*
+
+The screenshot also shows TCP, SSDP, mDNS, and ICMPv6 traffic.
+
+At the time of capture, Wireshark displayed:
+
+**626 packets captured | 0 packets dropped**
+
+---
+
+## 🧪 Step 4: Wireshark Display Filters
+
+Wireshark display filters help isolate specific traffic for investigation.
+
+The following filters are useful for continued practice:
+
+| Protocol / Investigation | Display Filter |
 |---|---|
-| TCP traffic | `tcp` |
-| UDP traffic | `udp` |
-| DNS traffic | `dns` |
-| HTTP traffic | `http` |
-| ICMP traffic | `icmp` |
-| ICMPv6 traffic | `icmpv6` |
+| TCP | `tcp` |
+| UDP | `udp` |
+| DNS | `dns` |
+| HTTP | `http` |
+| ICMP | `icmp` |
+| ICMPv6 | `icmpv6` |
 | Multicast DNS | `mdns` |
-| SSDP discovery | `ssdp` |
-| Traffic involving a specific host | `ip.addr == 10.0.0.31` |
-| SSDP UDP port | `udp.port == 1900` |
+| SSDP | `ssdp` |
+| Specific IP address | `ip.addr == 10.0.0.31` |
+| UDP Port 1900 | `udp.port == 1900` |
 | Initial TCP SYN packets | `tcp.flags.syn == 1 && tcp.flags.ack == 0` |
 
-To apply a filter, enter it in the **display filter bar** at the top of Wireshark and press **Enter**. Display filters narrow what is shown; they do not change the packets already captured.
+**Note:** These are practice filters for future analysis. The screenshots do not demonstrate that every filter was applied.
 
-## 📊 Observations and Interpretation
+---
 
-| Observation from screenshots | Interpretation |
+## 📊 Network Traffic Observations
+
+| Observed Traffic | Interpretation |
 |---|---|
-| mDNS packets to `224.0.0.251` | Local multicast service discovery |
-| SSDP packets to `239.255.255.250` | Device/service discovery, commonly associated with UPnP |
-| TCP packets with ACK flags | Acknowledgments within TCP communication |
-| ICMPv6 Router Advertisement | IPv6 router/network configuration signaling |
-| Expanded IPv4 header fields | Demonstrates how to inspect packet structure and metadata |
+| mDNS | Local multicast service discovery |
+| SSDP | Network device and service discovery |
+| TCP ACK | Acknowledgment in TCP communication |
+| ICMPv6 | IPv6 network control messaging |
+| IPv4 Header | Network-layer addressing and packet information |
+| UDP | Connectionless transport protocol |
 
-**Security note:** These observations are consistent with ordinary network activity. The screenshots alone do not establish an intrusion, compromise, or vulnerability.
+These observations helped me understand how devices communicate and exchange information within a network.
+
+---
 
 ## 📚 Learning Outcomes
 
-Through this exercise, I practiced identifying capture interfaces, starting a Wi-Fi capture, reading packet lists, examining layered packet headers, and interpreting common local-network discovery traffic. I also gained a clearer understanding of how Wireshark supports network troubleshooting and security investigations.
+Through this practical project, I developed a better understanding of:
+
+1. Installing and configuring Wireshark.
+2. Identifying and selecting capture interfaces.
+3. Capturing live network traffic.
+4. Reading and interpreting packet information.
+5. Inspecting Ethernet and IPv4 headers.
+6. Understanding common network protocols.
+7. Applying display filters for network investigation.
+8. Identifying local network discovery activity.
+9. Using Wireshark for network troubleshooting.
+10. Understanding the importance of packet analysis in cybersecurity and SOC operations.
+
+---
 
 ## 🛡️ Ethical Security Statement
 
-All activities in this repository are intended for education and authorized security training. Capture or inspect traffic only on systems and networks where you have permission. Review packet captures and screenshots before sharing them publicly because they may contain device names, IP addresses, or other network metadata.
+All packet capture and network analysis activities documented in this repository are intended strictly for educational purposes and authorized cybersecurity training.
+
+Network traffic should only be captured on systems and networks where appropriate permission has been granted.
 
 ---
 
 ## 👨‍💻 About the Author
 
-**Lamidi Olatunji Micheal Eleshin**  
-Cybersecurity & Penetration Testing Intern | Aspiring Cybersecurity Analyst | IT Auditing | IT Support | GRC & Risk Management
+**Lamidi Olatunji Micheal Eleshin**
 
-**Program:** Networkwalks Cybersecurity & Penetration Testing Internship  
-**Batch:** B084 | Week 1  
-**Project Focus:** Wireshark Installation, Packet Capture, Protocol Inspection & Network Traffic Analysis
+Cybersecurity & Penetration Testing Intern | Aspiring Cybersecurity Analyst | IT Auditor | IT Support Engineer | GRC & Risk Management
+
+**Specialization Areas:**
+
+Cybersecurity | Network Security | IT Auditing | Governance, Risk & Compliance | Penetration Testing | SOC Operations
+
+**Internship:** Networkwalks Cybersecurity & Penetration Testing
+
+**Batch:** B084 | Week 1
+
+**Project Focus:** Wireshark Installation, Packet Capture, Protocol Analysis & Network Security Monitoring
+
+---
 
 <div align="center">
 
-**“Cybersecurity begins with vigilance. Failure to prevent a threat today may become tomorrow's data disaster.”**
+**"Cybersecurity begins with vigilance. Failure to prevent a threat today may become tomorrow's data disaster."**
 
 *— Lamidi Olatunji Micheal Eleshin*
 
 </div>
-
